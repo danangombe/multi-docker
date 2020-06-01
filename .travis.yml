@@ -12,7 +12,7 @@ script:
 
 after_success:
     - docker build -t egbeoso/multi-client ./client
-    - docker build  -t egbeoso/multi-nginx  ./nginx
+    - docker build -t egbeoso/multi-nginx  ./nginx
     - docker build -t egbeoso/multi-server  ./server 
     - docker build -t egbeoso/multi-worker  ./worker
 
