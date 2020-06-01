@@ -4,25 +4,25 @@ services:
     - docker
 
 before_install:
-    - docker build -t danangombe/react-test -f ./client/Dockerfile.dev ./client
+    - docker build -t egbeoso/react-test -f ./client/Dockerfile.dev ./client
 
 
 script:
-    - docker run -e CI=true danangombe/react-test npm test
+    - docker run -e CI=true egbeoso/react-test npm test
 
 after_success:
-    - docker build -t danangombe/multi-client ./client
-    - docker build  -t danangombe/multi-nginx  ./nginx
-    - docker build -t danangombe/multi-server  ./server 
-    - docker build -t danangombe/multi-worker  ./worker
+    - docker build -t egbeoso/multi-client ./client
+    - docker build  -t egbeoso/multi-nginx  ./nginx
+    - docker build -t egbeoso/multi-server  ./server 
+    - docker build -t egbeoso/multi-worker  ./worker
 
     #push images to docker hub please log into docker cli
 
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
-    - docker push danangombe/multi-client
-    - docker push danangombe/multi-nginx
-    - docker push danangombe/multi-server
-    - docker push danangombe/multi-worker
+    - docker push egbeoso/multi-client
+    - docker push egbeoso/multi-nginx
+    - docker push egbeoso/multi-server
+    - docker push egbeoso/multi-worker
 
 
