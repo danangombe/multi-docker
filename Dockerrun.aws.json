@@ -23,7 +23,7 @@
             "image": "egbeoso/multi-worker",
             "hostname": "worker",
             "essential": false,
-            "memory" : 128
+            "memory" : 256
         },
 
         {
