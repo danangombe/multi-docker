@@ -6,29 +6,29 @@
             "name": "client" ,
             "image": "egbeoso/multi-client ",
             "hostname" : "client" ,
-            "essential" : false,
-            "memory" : 128
+            "essential" : false
+            
 
         },
         {
             "name":"server",
             "image": "egbeoso/multi-server",
             "hostname":"api",
-            "essential":false,
-            "memory" : 128
+            "essential":false
+            
         },
 
         {
             "name": "worker",
             "image": "egbeoso/multi-worker",
             "hostname": "worker",
-            "essential": false,
-            "memory" : 128
+            "essential": false
+            
         },
 
         {
             "name":"nginx",
-            "image": "egbeoso/multi-nginx ",
+            "image": "stephengrider/multi-nginx ",
             "hostname":"nginx",
             "essential": true,
             "portMappings" : [
@@ -38,8 +38,8 @@
                 }
             ],
 
-            "links" : ["client", "server"],
-            "memory" : 128
+            "links" : ["client", "server"]
+            
         }
     ]
 }
