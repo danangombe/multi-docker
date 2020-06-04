@@ -23,12 +23,12 @@
             "image": "egbeoso/multi-worker",
             "hostname": "worker",
             "essential": false,
-            "memory" : 256
+            "memory" : 128
         },
 
         {
             "name":"nginx",
-            "image": "stephengrider/multi-nginx ",
+            "image": "egbeoso/multi-nginx ",
             "hostname":"nginx",
             "essential": true,
             "portMappings" : [
@@ -39,7 +39,7 @@
             ],
 
             "links" : ["client", "server"],
-            "memory" : 256
+            "memory" : 128
         }
     ]
 }
