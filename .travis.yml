@@ -24,5 +24,6 @@ after_success:
     - docker push egbeoso/multi-nginx
     - docker push egbeoso/multi-server
     - docker push egbeoso/multi-worker
+    - docker pull stephengrider/multi-nginx
 
 

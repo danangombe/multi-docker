@@ -4,28 +4,28 @@
 
         {
             "name": "client" ,
-            "image": "danangombe/multi-client ",
+            "image": "egbeoso/multi-client ",
             "hostname" : "client" ,
             "essential" : false
 
         },
         {
             "name":"server",
-            "image": "danangombe/multi-server",
+            "image": "egbeoso/multi-server",
             "hostname":"api",
             "essential":false
         },
 
         {
             "name": "worker",
-            "image": "danangombe/multi-worker",
+            "image": "egbeoso/multi-worker",
             "hostname": "worker",
             "essential": false
         },
 
         {
             "name":"nginx",
-            "image": "danangombe/multi-nginx ",
+            "image": "stephengrider/multi-nginx ",
             "hostname":"nginx",
             "essential": true,
             "portMappings" : [
